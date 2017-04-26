@@ -76,7 +76,6 @@ header {
 
 #projects .section-content > div {
   width: 20rem;
-  margin: auto;
 }
 
 .project-tall, .project-short {
@@ -84,17 +83,18 @@ header {
   float: left;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .project-tall {
   height: 31rem;
-  width: 20rem;
+  width: 100%;
 }
 
 .project-short {
   height: 15rem;
-  width: 20rem;
+  width: 100%;
 }
 
 .project-tall img, .project-short img {
