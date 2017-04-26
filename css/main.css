@@ -12,6 +12,10 @@ body {
 }
 
 h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 auto;
+  color: #5367d6;
   font-family: "Aldrich", sans-serif;
   letter-spacing: +0.5rem;
   font-weight: 500;
@@ -23,37 +27,20 @@ h3, p {
 }
 
 header {
-  position: relative;
-  display: block;
-  text-align: center;
-  width: 100%;
-  top: 0;
-  left: 0;
   /*background-color: rgba(255, 255, 255, 0.7);*/
 }
 
-header h1 {
-  font-size: 3rem;
-  margin: 0 auto;
-  color: #5367d6;
-}
-
-#front {
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
 #nameplate {
-  justify-content: center;
-  align-items: center;
   margin: auto;
 }
 
 #nameplate h1 {
   font-size: 4rem;
   color: white;
+}
+
+#nameplate h3 {
+  text-align: center;
 }
 
 .flex-column {
@@ -82,16 +69,13 @@ header h1 {
   width: 80%;
   margin: auto;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   box-shadow: 0 0 0.3rem 0.1rem rgba(255, 255, 255, 0.3);
 }
 
-#projects.section-content > div {
+#projects .section-content > div {
   width: 20rem;
-  align-content: space-between;
-  justify-content: space-between;
   margin: auto;
 }
 
@@ -139,17 +123,17 @@ header h1 {
   width: 100%;
 }
 
-.overlay h3, .overlay a, .overlay p {
+.overlay h2, .overlay a, .overlay p {
   position: absolute;
   opacity: 0;
 }
 
-.overlay h3, .overlay p {
+.overlay h2, .overlay p {
   right: 1rem;
   left: 1rem;
 }
 
-.overlay h3 {
+.overlay h2 {
   font-family: "Aldrich", sans-serif;
   font-size: 2rem;
   top: 2rem;
@@ -163,11 +147,11 @@ header h1 {
   transition: opacity 0.35s, transform 0.35s;
 }
 
-.overlay:hover h3 {
+.overlay:hover h2 {
   transform: translate3d(0, 0, 0);
 }
 
-.overlay h3::after {
+.overlay h2::after {
   position: absolute;
   margin-top: 1rem;
   top: 100%;
@@ -181,7 +165,7 @@ header h1 {
   box-sizing: border-box;
 }
 
-.overlay:hover h3::after, .overlay:hover p, .overlay:hover h3 {
+.overlay:hover h2::after, .overlay:hover p, .overlay:hover h2 {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
