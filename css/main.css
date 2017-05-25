@@ -27,9 +27,15 @@ h3, p, a {
   font-family: "Reem Kufi", sans-serif;
   font-weight: 400;
 }
+
 a {
   text-decoration: none;
   color: white;
+}
+
+textarea {
+  -moz-resize: none;
+  resize: none;
 }
 
 header {
@@ -83,6 +89,8 @@ header {
 
 .flex-column {
   display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
 }
 
@@ -97,6 +105,7 @@ header {
 }
 
 .parallax header {
+  -webkit-align-self: center;
   align-self: center;
   margin: auto;
 }
@@ -104,8 +113,13 @@ header {
 #footer {
   height: 20%;
   display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -130,18 +144,49 @@ header {
   padding-top: 4rem;
   padding-bottom: 4rem;
   display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
   background-color: #232630;
 }
 
 .section-content {
+  display: -webkit-flex;
   display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
   text-align: center;
   /*box-shadow: 0 0 0.3rem 0.1rem rgba(255, 255, 255, 0.3);*/
 }
+
+#about > .section-content {
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+#about header h3 {
+  font-family: "Aldrich", sans-serif;
+  font-size: 2rem;
+}
+
+#about p {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
 
 #projects .section-content > div {
   width: 20rem;
@@ -150,8 +195,12 @@ header {
 .project-tall, .project-short {
   position: relative;
   float: left;
+  display: -webkit-flex;
   display: flex;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
 }
@@ -206,17 +255,24 @@ header {
   font-family: "Aldrich", sans-serif;
   font-size: 2rem;
   top: 2rem;
+  -webkit-transition: transform 0.35s;
+  -moz-transition: transform 0.35s;
   transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 1rem, 0);
   transform: translate3d(0, 1rem, 0);
 }
 
 .overlay p {
   bottom: 1rem;
+  -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
+  -moz-transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
 
 .overlay:hover h2 {
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -230,12 +286,15 @@ header {
   background-color: #fff;
   content: '';
   opacity: 0;
+  -moz-transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   box-sizing: border-box;
 }
 
 .overlay:hover h2::after, .overlay:hover p, .overlay:hover h2 {
   opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
